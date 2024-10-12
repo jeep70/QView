@@ -48,7 +48,7 @@
         <location filename="../src/actionmanager.cpp" line="459"/>
         <location filename="../src/actionmanager.cpp" line="476"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>空</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="468"/>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="749"/>
         <source>&amp;First File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;最初のファイル</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="753"/>
@@ -227,17 +227,17 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="773"/>
         <source>&amp;Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;次のフレーム</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="777"/>
         <source>&amp;Decrease Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>速度低下</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="781"/>
         <source>&amp;Reset Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;速度をリセット</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="785"/>
@@ -305,7 +305,7 @@
         <location filename="../src/actionmanager.cpp" line="825"/>
         <source>Other...</source>
         <extracomment>Open with other program for macos</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>その他...</translation>
     </message>
 </context>
 <context>
@@ -323,7 +323,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="390"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>空</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="563"/>

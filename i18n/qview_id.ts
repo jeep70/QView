@@ -796,7 +796,7 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca (read-only).</translation>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="152"/>
         <source>Control the minimum size that the window should reach when matching the image&apos;s actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Atur ukuran minimal yang harus dicapai ketika mencocokkan ukuran asli gambar</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="155"/>
@@ -808,7 +808,7 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca (read-only).</translation>
         <location filename="../src/qvoptionsdialog.ui" line="174"/>
         <location filename="../src/qvoptionsdialog.ui" line="184"/>
         <source>Control the maximum size that the window should reach when matching the image&apos;s actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Atur ukuran maksimal yang harus dicapai ketika mencocokkan ukuran asli gambar</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="177"/>
@@ -818,27 +818,27 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca (read-only).</translation>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="219"/>
         <source>Choose whether or not the titlebar should always be dark regardless of your chosen macOS appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih apakah bilah judul harus selalu berwarna gelap atau tidak, apa pun tampilan macOS yang Anda pilih</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="222"/>
         <source>&amp;Titlebar always dark</source>
-        <translation>Bar judul selalu gelap</translation>
+        <translation>&amp;Bilah judul selalu gelap</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="232"/>
         <source>Show menubar</source>
-        <translation>Tampilkan bar menu</translation>
+        <translation>Tampilkan bilah menu</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="239"/>
         <source>Choose whether or not to display the titlebar text while in fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih apakah bilah teks judul ditampilkan atau tidak pada layar penuh</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="242"/>
         <source>Show titlebar text in fullscreen</source>
-        <translation>Tampilkan teks judul dalam layar penuh</translation>
+        <translation>Tampilkan bilah teks judul dalam layar penuh</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="249"/>
@@ -853,114 +853,114 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca (read-only).</translation>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="263"/>
         <source>Scaling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Penskalaan:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="270"/>
         <source>Turn this off to see individual pixels</source>
-        <translation type="unfinished"></translation>
+        <translation>Matikan ini untuk melihat masing-masing piksel</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="273"/>
         <source>&amp;Bilinear filtering</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Penyaringan bilinear</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="283"/>
         <source>Images appear aliased (having jagged edges) without this, but it is faster</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar tampak seperti disamarkan (memiliki tepi bergerigi) tanpa ini, tetapi ini lebih cepat</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="286"/>
         <source>&amp;Image scaling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Penskalaan gambar</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="296"/>
         <source>Choose whether or not the image continues to be scaled when zooming above the window size (can be laggier with large images)</source>
-        <translation type="unfinished"></translation>
+        <translation>Memilih apakah gambar akan terus diskalakan atau tidak apabila melakukan zoom di atas ukuran jendela (bisa jadi lebih lambat pada gambar yang besar)</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="299"/>
         <source>&amp;Scaling above window size</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Penskalaan di atas ukuran jendela</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="309"/>
         <location filename="../src/qvoptionsdialog.ui" line="319"/>
         <source>The amount to zoom every scroll wheel click</source>
-        <translation type="unfinished"></translation>
+        <translation>Jumlah untuk memperbesar setiap klik roda gulir</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="312"/>
         <source>Zoom amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>Memperbesar jumlah:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="341"/>
         <source>Choose whether scrolling zooms or moves the image (alternative can be accessed at any time by holding ctrl/cmd)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih apakah menggulir akan memperbesar atau memindahkan gambar (alternatif dapat diakses kapan saja dengan menahan ctrl/cmd)</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="344"/>
         <source>Scrolling &amp;zooms</source>
-        <translation type="unfinished"></translation>
+        <translation>Menggulir &amp;memperbesar</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="367"/>
         <source>Stop the image from going past its actual size when resizing the window - you can still zoom past it though</source>
-        <translation type="unfinished"></translation>
+        <translation>Hentikan gambar agar tidak melebihi ukuran sebenarnya ketika mengubah ukuran jendela - Anda masih dapat memperbesarnya</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="370"/>
         <source>Image resizes &amp;past actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengubah ukuran gambar &amp;mengubah ukuran sebenarnya</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="386"/>
         <location filename="../src/qvoptionsdialog.ui" line="408"/>
         <source>Ignores select sides of an image when fitting to window (some sides will extend beyond the window boundaries)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengabaikan sisi tertentu dari gambar ketika menyesuaikannya ke jendela (beberapa sisi akan melampaui batas jendela)</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="390"/>
         <source>Fit whole image</source>
-        <translation type="unfinished">Muat seluruh gambar</translation>
+        <translation>Menyesuaikan seluruh gambar</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="395"/>
         <source>Fit height</source>
-        <translation type="unfinished"></translation>
+        <translation>Ketinggian yang pas</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="400"/>
         <source>Fit width</source>
-        <translation type="unfinished"></translation>
+        <translation>Lebar yang pas</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="411"/>
         <source>On window resize:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pada pengubahan ukuran jendela:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="431"/>
         <source>Choose whether or not zooming in and out above 100% zoom will zoom towards the cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Memilih apakah pembesaran dan pengecilan di atas zoom 100% akan memperbesar ke arah kursor atau tidak</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="434"/>
         <source>Zoom &amp;towards cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Memperbesar &amp;ke arah kursor</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="445"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation>Lain-lain</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="461"/>
         <source>Sort files by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengurutkan file berdasarkan:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="469"/>
@@ -990,84 +990,84 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca (read-only).</translation>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="497"/>
         <source>A&amp;scending</source>
-        <translation type="unfinished"></translation>
+        <translation>N&amp;aik</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="507"/>
         <source>D&amp;escending</source>
-        <translation type="unfinished"></translation>
+        <translation>T&amp;urun</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="527"/>
         <location filename="../src/qvoptionsdialog.ui" line="537"/>
         <source>Controls the amount of images preloaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengontrol jumlah gambar yang dimuat sebelumnya</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="530"/>
         <source>Preloading:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pemuatan awal:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="544"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinonaktifkan</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="549"/>
         <source>Adjacent</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdekatan</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="554"/>
         <source>Extended</source>
-        <translation type="unfinished"></translation>
+        <translation>Diperpanjang</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="562"/>
         <source>Controls whether or not qView should go back to the first item after reaching the end of a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengontrol apakah qView harus kembali ke item pertama atau tidak setelah mencapai akhir folder</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="565"/>
         <source>&amp;Loop through folders</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mengulang melalui folder</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="588"/>
         <source>Slideshow direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arah tayangan slide:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="596"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Teruskan</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="601"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Mundur</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="609"/>
         <source>Slideshow timer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pengatur waktu tayangan slide:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="616"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> kedua</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="648"/>
         <source>Save &amp;recent files</source>
-        <translation type="unfinished"></translation>
+        <translation>Menyimpan &amp;file terbaru</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="655"/>
         <source>&amp;Update notifications on startup</source>
         <extracomment>The notifications are for new qView releases</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Memperbarui notifikasi saat memulai</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="451"/>
@@ -1077,38 +1077,38 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca (read-only).</translation>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="666"/>
         <source>Move Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Mundur</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="671"/>
         <source>Do Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak melakukan apa-apa</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="676"/>
         <source>Move Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Bergerak maju</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="684"/>
         <source>After deletion:</source>
-        <translation type="unfinished"></translation>
+        <translation>Setelah penghapusan:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="691"/>
         <source>&amp;Ask before deleting files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tanyakan sebelum menghapus file</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="712"/>
         <location filename="../src/qvoptionsdialog.ui" line="760"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Pintasan</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="755"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Tindakan</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.cpp" line="452"/>
@@ -1188,17 +1188,17 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca.</translation>
     <message>
         <location filename="../src/qvwelcomedialog.ui" line="472"/>
         <source>&amp;Enable update notifications on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mengaktifkan notifikasi pembaruan saat pengaktifan</translation>
     </message>
     <message>
         <location filename="../src/qvwelcomedialog.cpp" line="42"/>
         <source>Thank you for downloading qView.&lt;br&gt;Here&apos;s a few tips to get you started:</source>
-        <translation type="unfinished"></translation>
+        <translation>Terima kasih telah mengunduh qView.&lt;br&gt;Berikut adalah beberapa tips untuk membantu Anda memulai:</translation>
     </message>
     <message>
         <location filename="../src/qvwelcomedialog.cpp" line="49"/>
         <source>&lt;ul&gt;&lt;li&gt;Right click to access the main menu&lt;/li&gt;&lt;li&gt;Drag the image to reposition it&lt;/li&gt;&lt;li&gt;Scroll to zoom in and out&lt;/li&gt;&lt;li&gt;Use arrow keys to switch files&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;ul&gt;&lt;li&gt;Klik kanan untuk mengakses menu utama&lt;/li&gt;&lt;li&gt;Seret gambar untuk memposisikan ulang&lt;/li&gt;&lt;li&gt;Gulir untuk memperbesar dan memperkecil&lt;/li&gt;&lt;li&gt;Gunakan tombol panah untuk berpindah file&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
 </context>
 <context>
@@ -1321,12 +1321,12 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca.</translation>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="85"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>Cermin</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="86"/>
         <source>Flip</source>
-        <translation type="unfinished"></translation>
+        <translation>Membalik</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="87"/>
@@ -1336,37 +1336,37 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca.</translation>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="99"/>
         <source>Save Frame As</source>
-        <translation type="unfinished"></translation>
+        <translation>Simpan bingkai sebagai</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="100"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeda</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="101"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Bingkai berikutnya</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="102"/>
         <source>Decrease Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengurangi kecepatan</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="103"/>
         <source>Reset Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Atur ulang kecepatan</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="104"/>
         <source>Increase Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Tingkatkan kecepatan</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="105"/>
         <source>Toggle Slideshow</source>
-        <translation type="unfinished"></translation>
+        <translation>Beralih tayangan slide</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="106"/>
@@ -1424,18 +1424,19 @@ Tidak ada izin tulis atau berkas hanya dapat dibaca.</translation>
     <message>
         <location filename="../src/updatechecker.cpp" line="77"/>
         <source>&amp;Disable Update Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Menonaktifkan pemeriksaan pembaruan</translation>
     </message>
     <message>
         <location filename="../src/updatechecker.cpp" line="87"/>
         <source>qView Update Checking Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Pemeriksaan pembaruan qView dinonaktifkan</translation>
     </message>
     <message>
         <location filename="../src/updatechecker.cpp" line="87"/>
         <source>Update notifications on startup have been disabled.
 You can reenable them in the options dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pemberitahuan pembaruan saat pengaktifan telah dinonaktifkan.
+Anda dapat mengaktifkannya kembali dalam dialog opsi.</translation>
     </message>
 </context>
 </TS>

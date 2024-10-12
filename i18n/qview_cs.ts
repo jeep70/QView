@@ -21,12 +21,12 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="229"/>
         <source>&amp;Go</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Přejít</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="258"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zobrazení</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="282"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="318"/>
         <source>Open &amp;Recent</source>
-        <translation>Otevřít &amp;Nejnovější</translation>
+        <translation>Otevřít &amp;poslední</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="328"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="468"/>
         <source>Open With</source>
-        <translation>Otevřít s</translation>
+        <translation>Otevřít v aplikaci</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="650"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="663"/>
         <source>Open &amp;URL...</source>
-        <translation>Otevřít &amp;URL adresu...</translation>
+        <translation>Otevřít &amp;URL...</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="666"/>
@@ -95,24 +95,24 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="673"/>
         <source>Open Containing &amp;Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevřít obsahující &amp;složku</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="676"/>
         <source>Show in E&amp;xplorer</source>
         <extracomment>Open containing folder on windows</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit v P&amp;růzkumníku</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="679"/>
         <source>Show in &amp;Finder</source>
         <extracomment>Open containing folder on macOS</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit ve &amp;Finderu</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="684"/>
         <source>Show File &amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit &amp;informace o souboru</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="688"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="697"/>
         <source>&amp;Undo Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Odvolat akci Smazat</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="702"/>
@@ -147,37 +147,37 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="709"/>
         <source>R&amp;ename...</source>
-        <translation type="unfinished"></translation>
+        <translation>Př&amp;ejmenovat…</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="713"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvětš&amp;it</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="717"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmenši&amp;t</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="721"/>
         <source>Reset &amp;Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetovat &amp;přepínání velikosti</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="725"/>
         <source>Ori&amp;ginal Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Půvo&amp;dní velikost</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="729"/>
         <source>Rotate &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Otočit dop&amp;rava</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="733"/>
         <source>Rotate &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Otočit do&amp;leva</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="737"/>
@@ -187,22 +187,22 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="741"/>
         <source>&amp;Flip</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Převrátit</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="745"/>
         <source>Enter F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustit režim &amp;celé obrazovky</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="749"/>
         <source>&amp;First File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;První soubor</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="753"/>
         <source>Previous Fi&amp;le</source>
-        <translation type="unfinished"></translation>
+        <translation>Předchozí so&amp;ubor</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="757"/>
@@ -212,22 +212,22 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="761"/>
         <source>Las&amp;t File</source>
-        <translation type="unfinished"></translation>
+        <translation>Pos&amp;lední soubor</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="765"/>
         <source>Save Frame &amp;As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Uložit snímek &amp;jako…</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="769"/>
         <source>Pa&amp;use</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozasta&amp;vit</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="773"/>
         <source>&amp;Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Další snímek</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="777"/>
@@ -247,25 +247,25 @@
     <message>
         <location filename="../src/actionmanager.cpp" line="789"/>
         <source>Start S&amp;lideshow</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustit p&amp;rezentaci</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="794"/>
         <source>Option&amp;s</source>
         <extracomment>This is for the options dialog on windows</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Volb&amp;y</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="797"/>
         <source>Preference&amp;s</source>
         <extracomment>This is for the options dialog on non-mac unix platforms</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pře&amp;dvolby</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="800"/>
         <source>Preference&amp;s...</source>
         <extracomment>This is for the options dialog on mac</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Předv&amp;olby…</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="804"/>
@@ -276,7 +276,7 @@
         <location filename="../src/actionmanager.cpp" line="807"/>
         <source>&amp;About qView</source>
         <extracomment>This is for the about dialog on mac</extracomment>
-        <translation>&amp;O qView</translation>
+        <translation>&amp;O aplikaci qView</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="811"/>
@@ -287,7 +287,7 @@
         <location filename="../src/actionmanager.cpp" line="815"/>
         <source>Clear &amp;Menu</source>
         <extracomment>This is for clearing the recents menu</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vyprázdnit &amp;nabídku</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="819"/>
@@ -299,7 +299,7 @@
         <location filename="../src/actionmanager.cpp" line="822"/>
         <source>Choose another app</source>
         <extracomment>Open with other program for windows</extracomment>
-        <translation>Vyberte si jinou aplikaci</translation>
+        <translation>Vyberte jinou aplikaci</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="825"/>
@@ -313,12 +313,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="217"/>
         <source>Exit F&amp;ull Screen</source>
-        <translation type="unfinished">Ukončit F&amp;ull Screen</translation>
+        <translation>Ukončit režim &amp;celé obrazovky</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="222"/>
         <source>Enter F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Sp&amp;ustit režim celé obrazovky</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="390"/>
@@ -339,7 +339,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="563"/>
         <source>Error: URL is invalid</source>
-        <translation>Chyba: Adresa URL je neplatná</translation>
+        <translation>Chyba: URL je neplatné</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="569"/>
@@ -355,7 +355,7 @@
         <location filename="../src/mainwindow.cpp" line="573"/>
         <location filename="../src/mainwindow.cpp" line="629"/>
         <source>Open URL...</source>
-        <translation>Otevřít URL adresu...</translation>
+        <translation>Otevřít URL...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="590"/>
@@ -370,23 +370,24 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="630"/>
         <source>URL of a supported image file:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL podporovaného souboru obrázku:</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="685"/>
         <source>Can&apos;t delete %1:
 No write permission or file is read-only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nelze smazat %1:
+Není oprávnění k zápisu nebo je soubor jen ke čtení.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="689"/>
         <source>Are you sure you want to move %1 to the Trash?</source>
-        <translation type="unfinished"></translation>
+        <translation>Určitě chcete přesunout %1 do koše?</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="691"/>
         <source>Are you sure you want to move %1 to the Recycle Bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>Určitě chcete přesunout %1 do koše?</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="694"/>
@@ -396,12 +397,12 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/mainwindow.cpp" line="696"/>
         <source>Do not ask again</source>
-        <translation>Neptej se znova</translation>
+        <translation>Příště se už neptat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="725"/>
         <source>Can&apos;t delete %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nelze smazat %1.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="736"/>
@@ -414,28 +415,30 @@ No write permission or file is read-only.</source>
         <location filename="../src/mainwindow.cpp" line="806"/>
         <source>This program was compiled with an old version of Qt and this feature is not available.
 If you see this message, please report a bug!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tento program byl zkompilován starou verzí Qt a tato funkce není k dispozici.
+Pokud se vám tato zpráva zobrazí, nahlaste prosím chybu!</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="793"/>
         <source>Can&apos;t undo deletion of %1:
 No write permission or file is read-only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Smazání %1 nelze vrátit zpět:
+Není oprávnění k zápisu nebo je soubor jen ke čtení.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="801"/>
         <source>Failed undoing deletion of %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Smazání %1 se nepodařilo vrátit zpět.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="939"/>
         <source>Save Frame As...</source>
-        <translation>Uložit Frame jako...</translation>
+        <translation>Uložit snímek jako...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="968"/>
         <source>Res&amp;ume</source>
-        <translation type="unfinished"></translation>
+        <translation>Pok&amp;račovat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="977"/>
@@ -445,12 +448,12 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/mainwindow.cpp" line="1000"/>
         <source>Start S&amp;lideshow</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustit p&amp;rezentaci</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1009"/>
         <source>Stop S&amp;lideshow</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastavit p&amp;rezentaci</translation>
     </message>
 </context>
 <context>
@@ -481,7 +484,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/main.cpp" line="17"/>
         <source>The file to open.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor k otevření.</translation>
     </message>
 </context>
 <context>
@@ -489,7 +492,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvaboutdialog.ui" line="20"/>
         <source>About qView</source>
-        <translation>O qView</translation>
+        <translation>O aplikaci qView</translation>
     </message>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="44"/>
@@ -499,23 +502,23 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="47"/>
         <source>Nightly %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Noční %1</translation>
     </message>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="62"/>
         <source>Built with Qt %1 (%2)&lt;br&gt;Source code available under GPLv3 on &lt;a style=&quot;color: #03A9F4; text-decoration:none;&quot; href=&quot;https://github.com/jurplel/qView&quot;&gt;GitHub&lt;/a&gt;&lt;br&gt;Icon glyph created by Guilhem from the Noun Project&lt;br&gt;Copyright © %3 jurplel and qView contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Vytvořeno pomocí Qt %1 (%2)&lt;br&gt;Zdrojový kód je k dispozici pod licencí GPLv3 na &lt;a style=&quot;color: #03A9F4; text-decoration:none;&quot; href=&quot;https://github.com/jurplel/qView&quot;&gt;GitHubu&lt;/a&gt;&lt;br&gt;Glyf ikony vytvořil Guilhem z projektu Noun&lt;br&gt;Copyright © %3 jurplel a přispěvatelé qView</translation>
     </message>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="90"/>
         <source>Checking for updates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ověřování aktualizací…</translation>
     </message>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="94"/>
         <source>%1 update available</source>
         <extracomment>%1 is a version number e.g. &quot;4.0 update available&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Je k dispozici aktualizace %1</translation>
     </message>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="98"/>
@@ -525,7 +528,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="102"/>
         <source>Error checking for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba při kontrole aktualizací</translation>
     </message>
 </context>
 <context>
@@ -538,7 +541,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvapplication.cpp" line="49"/>
         <source>All Files</source>
-        <translation>Všechny subory</translation>
+        <translation>Všechny soubory</translation>
     </message>
     <message>
         <location filename="../src/qvapplication.cpp" line="136"/>
@@ -551,7 +554,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvcocoafunctions.mm" line="195"/>
         <source> (default)</source>
-        <translation type="unfinished"></translation>
+        <translation> (výchozí)</translation>
     </message>
 </context>
 <context>
@@ -565,7 +568,8 @@ No write permission or file is read-only.</source>
         <location filename="../src/qvgraphicsview.cpp" line="621"/>
         <source>Error occurred opening &quot;%3&quot;:
 %2 (Error %1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Při otevírání „%3“ došlo k chybě:
+%2 (Chyba %1)</translation>
     </message>
 </context>
 <context>
@@ -578,7 +582,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvinfodialog.ui" line="26"/>
         <source>Name:</source>
-        <translation>Jméno:</translation>
+        <translation>Název:</translation>
     </message>
     <message>
         <location filename="../src/qvinfodialog.ui" line="36"/>
@@ -600,7 +604,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvinfodialog.ui" line="75"/>
         <source>Location:</source>
-        <translation type="unfinished">Lokace:</translation>
+        <translation>Umístění:</translation>
     </message>
     <message>
         <location filename="../src/qvinfodialog.ui" line="101"/>
@@ -610,7 +614,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvinfodialog.ui" line="130"/>
         <source>Modified:</source>
-        <translation>Upraveno:</translation>
+        <translation>Změněno:</translation>
     </message>
     <message>
         <location filename="../src/qvinfodialog.ui" line="153"/>
@@ -625,22 +629,22 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvinfodialog.ui" line="193"/>
         <source>Frames:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snímky:</translation>
     </message>
     <message>
         <location filename="../src/qvinfodialog.ui" line="213"/>
         <source>Refresh</source>
-        <translation>Obnovit</translation>
+        <translation>Aktualizovat</translation>
     </message>
     <message>
         <location filename="../src/qvinfodialog.cpp" line="49"/>
         <source>%1 (%2 bytes)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2 bajtů)</translation>
     </message>
     <message>
         <location filename="../src/qvinfodialog.cpp" line="51"/>
         <source>%1 x %2 (%3 MP)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3 MP)</translation>
     </message>
 </context>
 <context>
@@ -648,7 +652,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvopenwithdialog.ui" line="14"/>
         <source>Choose Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrat aplikaci</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="66"/>
@@ -683,7 +687,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/openwith.h" line="72"/>
         <source>Office</source>
-        <translation type="unfinished"></translation>
+        <translation>Kancelář</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="73"/>
@@ -698,12 +702,12 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/openwith.h" line="75"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="76"/>
         <source>Utilities</source>
-        <translation type="unfinished"></translation>
+        <translation>Utility</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="77"/>
@@ -716,7 +720,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="17"/>
         <source>Options</source>
-        <translation>Možnosti</translation>
+        <translation>Volby</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="33"/>
@@ -726,48 +730,48 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="39"/>
         <source>Back&amp;ground color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba&amp;rva pozadí:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="56"/>
         <source>Changes the amount of information displayed in the titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Změní množství informací zobrazených v titulním řádku</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="59"/>
         <source>Titlebar text:</source>
-        <translation>Text v záhlaví:</translation>
+        <translation>Text v titulním řádku:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="66"/>
         <source>&amp;Basic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Základní</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="73"/>
         <source>&amp;Minimal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Minimální</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="83"/>
         <source>&amp;Practical</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Praktický</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="90"/>
         <source>&amp;Verbose</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Podrobný</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="110"/>
         <location filename="../src/qvoptionsdialog.ui" line="120"/>
         <source>Control when the window should resize to fit the image&apos;s actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Určuje, kdy má okno změnit velikost tak, aby odpovídalo skutečné velikosti obrázku</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="113"/>
         <source>Window matches image size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Okno odpovídá velikosti obrázku:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="127"/>
@@ -777,12 +781,12 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="132"/>
         <source>When launching</source>
-        <translation type="unfinished"></translation>
+        <translation>Při spuštění</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="137"/>
         <source>When opening images</source>
-        <translation type="unfinished"></translation>
+        <translation>Při otevírání obrázků</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="145"/>
@@ -792,7 +796,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="152"/>
         <source>Control the minimum size that the window should reach when matching the image&apos;s actual size</source>
-        <translation>Určete minimální velikost, které by okno mělo dosáhnout, když odpovídá skutečné velikosti obrázku</translation>
+        <translation>Určuje minimální velikost, které by okno mělo dosáhnout, když odpovídá skutečné velikosti obrázku</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="155"/>
@@ -804,7 +808,7 @@ No write permission or file is read-only.</source>
         <location filename="../src/qvoptionsdialog.ui" line="174"/>
         <location filename="../src/qvoptionsdialog.ui" line="184"/>
         <source>Control the maximum size that the window should reach when matching the image&apos;s actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Určuje maximální velikost, které by okno mělo dosáhnout, když odpovídá skutečné velikosti obrázku</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="177"/>
@@ -814,32 +818,32 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="219"/>
         <source>Choose whether or not the titlebar should always be dark regardless of your chosen macOS appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte, zda má být titulní řádek vždy tmavý bez ohledu na zvolený vzhled systému macOS</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="222"/>
         <source>&amp;Titlebar always dark</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Titulní řádek vždy tmavý</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="232"/>
         <source>Show menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit řádek nabídek</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="239"/>
         <source>Choose whether or not to display the titlebar text while in fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte, zda se má nebo nemá zobrazovat text titulního řádku na celé obrazovce</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="242"/>
         <source>Show titlebar text in fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit text titulního řádku na celé obrazovce</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="249"/>
         <source>&amp;Quit on last window closed</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ukončit při zavření posledního okna</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="257"/>
@@ -849,74 +853,74 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="263"/>
         <source>Scaling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Změna velikosti:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="270"/>
         <source>Turn this off to see individual pixels</source>
-        <translation type="unfinished"></translation>
+        <translation>Chcete-li zobrazit jednotlivé pixely, vypněte tuto funkci</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="273"/>
         <source>&amp;Bilinear filtering</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bilineární filtrování</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="283"/>
         <source>Images appear aliased (having jagged edges) without this, but it is faster</source>
-        <translation type="unfinished"></translation>
+        <translation>Bez toho se obrázky zobrazují jako roztřepené (se zubatými okraji), je to ale rychlejší</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="286"/>
         <source>&amp;Image scaling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Změnit velikost obrázku</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="296"/>
         <source>Choose whether or not the image continues to be scaled when zooming above the window size (can be laggier with large images)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte, zda se má obrázek při zvětšení nad velikost okna nadále měnit (u velkých obrázků může být pomalejší)</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="299"/>
         <source>&amp;Scaling above window size</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Změnit velikost nad velikost okna</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="309"/>
         <location filename="../src/qvoptionsdialog.ui" line="319"/>
         <source>The amount to zoom every scroll wheel click</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost zvětšení při jednom kroku kolečka myši</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="312"/>
         <source>Zoom amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>Míra zvětšení:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="341"/>
         <source>Choose whether scrolling zooms or moves the image (alternative can be accessed at any time by holding ctrl/cmd)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte, zda se má při posouvání obrázek zvětšit nebo přemístit (alternativu lze kdykoli vyvolat podržením kláves ctrl/cmd)</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="344"/>
         <source>Scrolling &amp;zooms</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvětšení &amp;posouváním</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="367"/>
         <source>Stop the image from going past its actual size when resizing the window - you can still zoom past it though</source>
-        <translation type="unfinished"></translation>
+        <translation>Při změně velikosti okna zabránit obrázku překročit svou skutečnou velikost – stále ho však můžete přiblížit</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="370"/>
         <source>Image resizes &amp;past actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Změnit velikost &amp;obrázku nad rámec skutečné velikosti</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="386"/>
         <location filename="../src/qvoptionsdialog.ui" line="408"/>
         <source>Ignores select sides of an image when fitting to window (some sides will extend beyond the window boundaries)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignoruje vybrané strany obrázku při přizpůsobení oknu (některé strany budou přesahovat hranice okna)</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="390"/>
@@ -936,134 +940,134 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="411"/>
         <source>On window resize:</source>
-        <translation type="unfinished"></translation>
+        <translation>Při změně velikosti okna:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="431"/>
         <source>Choose whether or not zooming in and out above 100% zoom will zoom towards the cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte, zda se zvětšování a zmenšování nad 100 % přiblíží směrem ke kurzoru</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="434"/>
         <source>Zoom &amp;towards cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvětšení &amp;směrem ke kurzoru</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="445"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation>Různé</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="461"/>
         <source>Sort files by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seřadit soubory podle:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="469"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Názvu</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="474"/>
         <source>Last Modified</source>
-        <translation>Naposledy upraveno</translation>
+        <translation>Poslední změny</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="479"/>
         <source>Size</source>
-        <translation>Velikost</translation>
+        <translation>Velikosti</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="484"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Typu</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="489"/>
         <source>Random</source>
-        <translation>Náhodný</translation>
+        <translation>Náhodně</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="497"/>
         <source>A&amp;scending</source>
-        <translation type="unfinished"></translation>
+        <translation>V&amp;zestupně</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="507"/>
         <source>D&amp;escending</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;estupně</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="527"/>
         <location filename="../src/qvoptionsdialog.ui" line="537"/>
         <source>Controls the amount of images preloaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Určuje množství předem načtených obrázků</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="530"/>
         <source>Preloading:</source>
-        <translation type="unfinished"></translation>
+        <translation>Předběžné načítání:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="544"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnuto</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="549"/>
         <source>Adjacent</source>
-        <translation type="unfinished"></translation>
+        <translation>Sousední</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="554"/>
         <source>Extended</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozšířené</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="562"/>
         <source>Controls whether or not qView should go back to the first item after reaching the end of a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Určuje, zda se má qView po dosažení konce složky vrátit na první položku</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="565"/>
         <source>&amp;Loop through folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Procházet složky ve smyčce</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="588"/>
         <source>Slideshow direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr prezentace:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="596"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Vpřed</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="601"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Zpět</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="609"/>
         <source>Slideshow timer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Časovač prezentace:</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="616"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sek</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="648"/>
         <source>Save &amp;recent files</source>
-        <translation type="unfinished"></translation>
+        <translation>Uložit &amp;poslední soubory</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="655"/>
         <source>&amp;Update notifications on startup</source>
         <extracomment>The notifications are for new qView releases</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aktualizovat oznámení při spuštění</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="451"/>
@@ -1073,17 +1077,17 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="666"/>
         <source>Move Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Posunout zpět</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="671"/>
         <source>Do Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedělat nic</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="676"/>
         <source>Move Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Posunout vpřed</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="684"/>
@@ -1093,7 +1097,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="691"/>
         <source>&amp;Ask before deleting files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zeptat se před smazáním souborů</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="712"/>
@@ -1109,17 +1113,17 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.cpp" line="452"/>
         <source>System Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Jazyk systému</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.cpp" line="476"/>
         <source>Restart Required</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyžaduje se restart</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.cpp" line="476"/>
         <source>You must restart qView to change the language.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chcete-li změnit jazyk, musíte restartovat qView.</translation>
     </message>
 </context>
 <context>
@@ -1132,7 +1136,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvrenamedialog.cpp" line="15"/>
         <source>File name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Název souboru:</translation>
     </message>
     <message>
         <location filename="../src/qvrenamedialog.cpp" line="26"/>
@@ -1144,13 +1148,15 @@ No write permission or file is read-only.</source>
         <location filename="../src/qvrenamedialog.cpp" line="26"/>
         <source>Could not rename %1:
 No write permission or file is read-only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodařilo se přejmenovat %1:
+Není oprávnění k zápisu nebo je soubor jen ke čtení.</translation>
     </message>
     <message>
         <location filename="../src/qvrenamedialog.cpp" line="45"/>
         <source>Could not rename %1:
 (Check that all characters are valid)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodařilo se přejmenovat %1:
+(Zkontrolujte platnost všech znaků)</translation>
     </message>
 </context>
 <context>
@@ -1163,12 +1169,12 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvshortcutdialog.cpp" line="53"/>
         <source>Shortcut Already Used</source>
-        <translation>Klávesová zkratka je již použitá</translation>
+        <translation>Klávesová zkratka je již použita</translation>
     </message>
     <message>
         <location filename="../src/qvshortcutdialog.cpp" line="53"/>
         <source>&quot;%1&quot; is already bound to &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>„%1“ je již svázána s „%2“</translation>
     </message>
 </context>
 <context>
@@ -1182,17 +1188,17 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvwelcomedialog.ui" line="472"/>
         <source>&amp;Enable update notifications on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Povolit oznámení o aktualizacích při spuštění</translation>
     </message>
     <message>
         <location filename="../src/qvwelcomedialog.cpp" line="42"/>
         <source>Thank you for downloading qView.&lt;br&gt;Here&apos;s a few tips to get you started:</source>
-        <translation type="unfinished"></translation>
+        <translation>Děkujeme, že jste si stáhli qView.&lt;br&gt;Zde je několik tipů, jak začít:</translation>
     </message>
     <message>
         <location filename="../src/qvwelcomedialog.cpp" line="49"/>
         <source>&lt;ul&gt;&lt;li&gt;Right click to access the main menu&lt;/li&gt;&lt;li&gt;Drag the image to reposition it&lt;/li&gt;&lt;li&gt;Scroll to zoom in and out&lt;/li&gt;&lt;li&gt;Use arrow keys to switch files&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;ul&gt;&lt;li&gt;Kliknutím pravým tlačítkem myši přejdete do hlavní nabídky&lt;/li&gt;&lt;li&gt;Přetažením obrázku změníte jeho polohu&lt;/li&gt;&lt;li&gt;Posouváním můžete obrázek zvětšovat a zmenšovat&lt;/li&gt;&lt;li&gt;Pomocí kláves se šipkami můžete přepínat soubory&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
 </context>
 <context>
@@ -1205,22 +1211,22 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="46"/>
         <source>Open URL</source>
-        <translation>Otevřít URL adresu</translation>
+        <translation>Otevřít URL</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="47"/>
         <source>Open Containing Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevřít obsahující složku</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="50"/>
         <source>Show in Explorer</source>
-        <translation>Zobrazit v Průzkumníku soborů</translation>
+        <translation>Zobrazit v Průzkumníku</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="52"/>
         <source>Show in Finder</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit ve Finderu</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="54"/>
@@ -1285,22 +1291,22 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="75"/>
         <source>Zoom In</source>
-        <translation>Přiblížit</translation>
+        <translation>Zvětšit</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="80"/>
         <source>Zoom Out</source>
-        <translation>Oddálit</translation>
+        <translation>Zmenšit</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="81"/>
         <source>Reset Zoom</source>
-        <translation type="unfinished">Resetovat Zoom</translation>
+        <translation>Resetovat přepínání velikosti</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="82"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Původní velikost</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="83"/>
@@ -1325,22 +1331,22 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="87"/>
         <source>Full Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Celá obrazovka</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="99"/>
         <source>Save Frame As</source>
-        <translation type="unfinished">Uložit Frame jako</translation>
+        <translation>Uložit snímek jako</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="100"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozastavit</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="101"/>
         <source>Next Frame</source>
-        <translation type="unfinished">Další Frame</translation>
+        <translation>Další snímek</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="102"/>
@@ -1360,12 +1366,12 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="105"/>
         <source>Toggle Slideshow</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepnout prezentaci</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="106"/>
         <source>Options</source>
-        <translation>Možnosti</translation>
+        <translation>Volby</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="108"/>
@@ -1408,28 +1414,29 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/updatechecker.cpp" line="72"/>
         <source>qView Update Available</source>
-        <translation type="unfinished">qView aktualizace k dispozici</translation>
+        <translation>qView aktualizace je k dispozici</translation>
     </message>
     <message>
         <location filename="../src/updatechecker.cpp" line="73"/>
         <source>qView %1 is available to download.</source>
-        <translation type="unfinished"></translation>
+        <translation>qView %1 je k dispozici ke stažení.</translation>
     </message>
     <message>
         <location filename="../src/updatechecker.cpp" line="77"/>
         <source>&amp;Disable Update Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zakázat kontrolu aktualizací</translation>
     </message>
     <message>
         <location filename="../src/updatechecker.cpp" line="87"/>
         <source>qView Update Checking Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrola aktualizací qView je vypnuta</translation>
     </message>
     <message>
         <location filename="../src/updatechecker.cpp" line="87"/>
         <source>Update notifications on startup have been disabled.
 You can reenable them in the options dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Oznámení o aktualizacích při spuštění byla vypnuta.
+Můžete je znovu povolit v dialogovém okně možností.</translation>
     </message>
 </context>
 </TS>

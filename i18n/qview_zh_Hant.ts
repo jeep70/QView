@@ -48,7 +48,7 @@
         <location filename="../src/actionmanager.cpp" line="459"/>
         <location filename="../src/actionmanager.cpp" line="476"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>空的</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="468"/>
@@ -299,13 +299,13 @@
         <location filename="../src/actionmanager.cpp" line="822"/>
         <source>Choose another app</source>
         <extracomment>Open with other program for windows</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>選擇另一個應用程式</translation>
     </message>
     <message>
         <location filename="../src/actionmanager.cpp" line="825"/>
         <source>Other...</source>
         <extracomment>Open with other program for macos</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>其他...</translation>
     </message>
 </context>
 <context>
@@ -323,7 +323,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="390"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>空的</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="563"/>
@@ -334,12 +334,12 @@
         <location filename="../src/mainwindow.cpp" line="793"/>
         <location filename="../src/mainwindow.cpp" line="801"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="563"/>
         <source>Error: URL is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤：URL 無效</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="569"/>
@@ -360,12 +360,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="590"/>
         <source>Error </source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤 </translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="613"/>
         <source>Error: Invalid image</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤：圖像無效</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="630"/>
@@ -387,7 +387,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/mainwindow.cpp" line="691"/>
         <source>Are you sure you want to move %1 to the Recycle Bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>您確定要將 %1 移至回收站嗎？</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="694"/>
@@ -484,7 +484,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/main.cpp" line="17"/>
         <source>The file to open.</source>
-        <translation type="unfinished">要開啟的檔案。</translation>
+        <translation>要開啟的文件。</translation>
     </message>
 </context>
 <context>
@@ -502,7 +502,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="47"/>
         <source>Nightly %1</source>
-        <translation type="unfinished"></translation>
+        <translation>每晚 %1</translation>
     </message>
     <message>
         <location filename="../src/qvaboutdialog.cpp" line="62"/>
@@ -562,7 +562,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvgraphicsview.cpp" line="621"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../src/qvgraphicsview.cpp" line="621"/>
@@ -593,7 +593,7 @@ No write permission or file is read-only.</source>
         <location filename="../src/qvinfodialog.ui" line="183"/>
         <location filename="../src/qvinfodialog.ui" line="203"/>
         <source>error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../src/qvinfodialog.ui" line="52"/>
@@ -656,62 +656,62 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/openwith.h" line="66"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>發展</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="67"/>
         <source>Education</source>
-        <translation type="unfinished"></translation>
+        <translation>教育</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="68"/>
         <source>Games</source>
-        <translation type="unfinished"></translation>
+        <translation>遊戲</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="69"/>
         <source>Graphics</source>
-        <translation type="unfinished"></translation>
+        <translation>圖形</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="70"/>
         <source>Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>網際網路</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="71"/>
         <source>Multimedia</source>
-        <translation type="unfinished"></translation>
+        <translation>多媒體</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="72"/>
         <source>Office</source>
-        <translation type="unfinished"></translation>
+        <translation>辦公室</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="73"/>
         <source>Science</source>
-        <translation type="unfinished"></translation>
+        <translation>科學</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="74"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="75"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>系統</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="76"/>
         <source>Utilities</source>
-        <translation type="unfinished"></translation>
+        <translation>公用事業</translation>
     </message>
     <message>
         <location filename="../src/openwith.h" line="77"/>
         <source>Other</source>
-        <translation type="unfinished"></translation>
+        <translation>其他</translation>
     </message>
 </context>
 <context>
@@ -719,7 +719,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="17"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>選項</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="33"/>
@@ -817,7 +817,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="219"/>
         <source>Choose whether or not the titlebar should always be dark regardless of your chosen macOS appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇標題列是否應始終為黑色，無論您選擇的 macOS 外觀為何</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="222"/>
@@ -1020,7 +1020,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="554"/>
         <source>Extended</source>
-        <translation type="unfinished"></translation>
+        <translation>擴充</translation>
     </message>
     <message>
         <location filename="../src/qvoptionsdialog.ui" line="562"/>
@@ -1141,7 +1141,7 @@ No write permission or file is read-only.</source>
         <location filename="../src/qvrenamedialog.cpp" line="26"/>
         <location filename="../src/qvrenamedialog.cpp" line="45"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
     <message>
         <location filename="../src/qvrenamedialog.cpp" line="26"/>
@@ -1187,7 +1187,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/qvwelcomedialog.ui" line="472"/>
         <source>&amp;Enable update notifications on startup</source>
-        <translation type="unfinished">&amp;啟用啟動時的更新通知</translation>
+        <translation>&amp;啟動時啟用更新通知</translation>
     </message>
     <message>
         <location filename="../src/qvwelcomedialog.cpp" line="42"/>
@@ -1220,12 +1220,12 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="50"/>
         <source>Show in Explorer</source>
-        <translation type="unfinished"></translation>
+        <translation>在資源管理器裡顯示</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="52"/>
         <source>Show in Finder</source>
-        <translation type="unfinished"></translation>
+        <translation>在觀景器中顯示</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="54"/>
@@ -1235,7 +1235,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="55"/>
         <source>Restore from Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>從垃圾箱恢復</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="57"/>
@@ -1370,7 +1370,7 @@ No write permission or file is read-only.</source>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="106"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>選項</translation>
     </message>
     <message>
         <location filename="../src/shortcutmanager.cpp" line="108"/>
