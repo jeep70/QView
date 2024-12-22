@@ -144,6 +144,20 @@ bool SettingsManager::isDefault(const QString &key) const
     return getSetting(key) == getSetting(key, true);
 }
 
+void SettingsManager::migrateOldSettings()
+{
+    QSettings settings;
+    settings.beginGroup("options");
+    if (!settings.contains("smoothscalingmode") && settings.contains("filteringenabled"))
+    {
+        const int value =
+            settings.value("scalingenabled").toBool() ? 2 :
+            settings.value("filteringenabled").toBool() ? 1 :
+            0;
+        settings.setValue("smoothscalingmode", value);
+    }
+}
+
 void SettingsManager::initializeSettingsLibrary()
 {
     // Window
@@ -158,9 +172,10 @@ void SettingsManager::initializeSettingsLibrary()
     settingsLibrary.insert("menubarenabled", {false, {}});
     settingsLibrary.insert("fullscreendetails", {false, {}});
     // Image
-    settingsLibrary.insert("filteringenabled", {true, {}});
-    settingsLibrary.insert("scalingenabled", {true, {}});
+    settingsLibrary.insert("smoothscalingmode", {2, {}});
     settingsLibrary.insert("scalingtwoenabled", {true, {}});
+    settingsLibrary.insert("smoothscalinglimitenabled", {false, {}});
+    settingsLibrary.insert("smoothscalinglimitpercent", {400, {}});
     settingsLibrary.insert("scalefactor", {25, {}});
     settingsLibrary.insert("scrollzoomsenabled", {true, {}});
     settingsLibrary.insert("cursorzoom", {true, {}});

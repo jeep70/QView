@@ -23,7 +23,6 @@ QVOptionsDialog::QVOptionsDialog(QWidget *parent) :
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &QVOptionsDialog::buttonBoxClicked);
     connect(ui->shortcutsTable, &QTableWidget::cellDoubleClicked, this, &QVOptionsDialog::shortcutCellDoubleClicked);
     connect(ui->bgColorCheckbox, &QCheckBox::stateChanged, this, &QVOptionsDialog::bgColorCheckboxStateChanged);
-    connect(ui->scalingCheckbox, &QCheckBox::stateChanged, this, &QVOptionsDialog::scalingCheckboxStateChanged);
 
     populateLanguages();
 
@@ -68,6 +67,7 @@ QVOptionsDialog::QVOptionsDialog(QWidget *parent) :
 #endif
 
     syncSettings(false, true);
+    connect(ui->smoothScalingComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &QVOptionsDialog::smoothScalingComboBoxCurrentIndexChanged);
     connect(ui->windowResizeComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &QVOptionsDialog::windowResizeComboBoxCurrentIndexChanged);
     connect(ui->langComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &QVOptionsDialog::languageComboBoxCurrentIndexChanged);
     syncShortcuts();
@@ -154,16 +154,13 @@ void QVOptionsDialog::syncSettings(bool defaults, bool makeConnections)
     syncCheckbox(ui->menubarCheckbox, "menubarenabled", defaults, makeConnections);
     // fullscreendetails
     syncCheckbox(ui->detailsInFullscreen, "fullscreendetails", defaults, makeConnections);
-    // filteringenabled
-    syncCheckbox(ui->filteringCheckbox, "filteringenabled", defaults, makeConnections);
-    // scalingenabled
-    syncCheckbox(ui->scalingCheckbox, "scalingenabled", defaults, makeConnections);
-    if (ui->scalingCheckbox->isChecked())
-        ui->scalingTwoCheckbox->setEnabled(true);
-    else
-        ui->scalingTwoCheckbox->setEnabled(false);
+    // smoothscalingmode
+    syncComboBox(ui->smoothScalingComboBox, "smoothscalingmode", defaults, makeConnections);
+    smoothScalingComboBoxCurrentIndexChanged(ui->smoothScalingComboBox->currentIndex());
     // scalingtwoenabled
     syncCheckbox(ui->scalingTwoCheckbox, "scalingtwoenabled", defaults, makeConnections);
+    // smoothscalinglimitenabled
+    syncCheckbox(ui->smoothScalingLimitCheckbox, "smoothscalinglimitenabled", defaults, makeConnections);
     // scalefactor
     syncSpinBox(ui->scaleFactorSpinBox, "scalefactor", defaults, makeConnections);
     // scrollzoomsenabled
@@ -437,12 +434,10 @@ void QVOptionsDialog::bgColorCheckboxStateChanged(int arg1)
     updateBgColorButton();
 }
 
-void QVOptionsDialog::scalingCheckboxStateChanged(int arg1)
+void QVOptionsDialog::smoothScalingComboBoxCurrentIndexChanged(int index)
 {
-    if (arg1 > 0)
-        ui->scalingTwoCheckbox->setEnabled(true);
-    else
-        ui->scalingTwoCheckbox->setEnabled(false);
+    ui->scalingTwoCheckbox->setEnabled(index == 2);
+    ui->smoothScalingLimitCheckbox->setEnabled(index != 0);
 }
 
 void QVOptionsDialog::windowResizeComboBoxCurrentIndexChanged(int index)
