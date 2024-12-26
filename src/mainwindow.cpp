@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Connect graphicsview signals
     connect(graphicsView, &QVGraphicsView::fileChanged, this, &MainWindow::fileChanged);
-    connect(graphicsView, &QVGraphicsView::updatedLoadedPixmapItem, this, &MainWindow::setWindowSize);
+    connect(graphicsView, &QVGraphicsView::zoomLevelChanged, this, &MainWindow::zoomLevelChanged);
     connect(graphicsView, &QVGraphicsView::cancelSlideshow, this, &MainWindow::cancelSlideshow);
 
     // Initialize escape shortcut
@@ -79,6 +79,12 @@ MainWindow::MainWindow(QWidget *parent) :
     // Timer for slideshow
     slideshowTimer = new QTimer(this);
     connect(slideshowTimer, &QTimer::timeout, this, &MainWindow::slideshowAction);
+
+    // Timer for updating titlebar after zoom change
+    zoomTitlebarUpdateTimer = new QTimer(this);
+    zoomTitlebarUpdateTimer->setSingleShot(true);
+    zoomTitlebarUpdateTimer->setInterval(50);
+    connect(zoomTitlebarUpdateTimer, &QTimer::timeout, this, &MainWindow::buildWindowTitle);
 
     // Context menu
     auto &actionManager = qvApp->getActionManager();
@@ -387,9 +393,16 @@ void MainWindow::fileChanged()
     if (info->isVisible())
         refreshProperties();
     buildWindowTitle();
+    setWindowSize();
 
     // repaint to handle error message
     update();
+}
+
+void MainWindow::zoomLevelChanged()
+{
+    if (!zoomTitlebarUpdateTimer->isActive())
+        zoomTitlebarUpdateTimer->start();
 }
 
 void MainWindow::disableActions()
@@ -496,14 +509,16 @@ void MainWindow::buildWindowTitle()
         }
         case 2:
         {
-            newString = QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
+            newString = QString::number(graphicsView->getZoomLevel() * 100.0, 'f', 1) + "%";
+            newString += " - " + QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
             newString += "/" + QString::number(getCurrentFileDetails().folderFileInfoList.count());
             newString += " - " + getCurrentFileDetails().fileInfo.fileName();
             break;
         }
         case 3:
         {
-            newString = QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
+            newString = QString::number(graphicsView->getZoomLevel() * 100.0, 'f', 1) + "%";
+            newString += " - " + QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
             newString += "/" + QString::number(getCurrentFileDetails().folderFileInfoList.count());
             newString += " - " + getCurrentFileDetails().fileInfo.fileName();
             if (!getCurrentFileDetails().errorData.hasError)
@@ -552,11 +567,6 @@ void MainWindow::setWindowSize()
     qreal minWindowResizedPercentage = qvApp->getSettingsManager().getInteger("minwindowresizedpercentage")/100.0;
     qreal maxWindowResizedPercentage = qvApp->getSettingsManager().getInteger("maxwindowresizedpercentage")/100.0;
 
-
-    QSize imageSize = getCurrentFileDetails().loadedPixmapSize;
-    imageSize -= QSize(4, 4);
-
-
     // Try to grab the current screen
     QScreen *currentScreen = screenContaining(frameGeometry());
 
@@ -579,28 +589,42 @@ void MainWindow::setWindowSize()
     const QSize hardLimitSize = currentScreen->availableSize() - windowFrameSize - extraWidgetsSize;
     const QSize screenSize = currentScreen->size();
     const QSize minWindowSize = (screenSize * minWindowResizedPercentage).boundedTo(hardLimitSize);
-    const QSize maxWindowSize = (screenSize * maxWindowResizedPercentage).boundedTo(hardLimitSize);
+    const QSize maxWindowSize = (screenSize * qMax(maxWindowResizedPercentage, minWindowResizedPercentage)).boundedTo(hardLimitSize);
+    const QSizeF imageSize = graphicsView->getEffectiveOriginalSize();
+    const qreal logicalPixelScale = graphicsView->devicePixelRatioF();
+    const bool enforceMinSizeBothDimensions = false;
 
-    if (imageSize.width() < minWindowSize.width() && imageSize.height() < minWindowSize.height())
+    const auto gvRoundSizeF = [logicalPixelScale](const QSizeF value) {
+        return QSize(
+            QVGraphicsView::roundToCompleteLogicalPixel(value.width(), logicalPixelScale),
+            QVGraphicsView::roundToCompleteLogicalPixel(value.height(), logicalPixelScale)
+        );
+    };
+    const auto gvReverseRoundSize = [logicalPixelScale](const QSize value) {
+        return QSizeF(
+            QVGraphicsView::reverseLogicalPixelRounding(value.width(), logicalPixelScale),
+            QVGraphicsView::reverseLogicalPixelRounding(value.height(), logicalPixelScale)
+        );
+    };
+
+    QSize targetSize = gvRoundSizeF(imageSize);
+
+    const bool limitToMin = targetSize.width() < minWindowSize.width() && targetSize.height() < minWindowSize.height();
+    const bool limitToMax = targetSize.width() > maxWindowSize.width() || targetSize.height() > maxWindowSize.height();
+    if (limitToMin || limitToMax)
     {
-        imageSize.scale(minWindowSize, Qt::KeepAspectRatio);
-    }
-    else if (imageSize.width() > maxWindowSize.width() || imageSize.height() > maxWindowSize.height())
-    {
-        imageSize.scale(maxWindowSize, Qt::KeepAspectRatio);
+        const QSizeF enforcedSize = gvReverseRoundSize((limitToMin ? minWindowSize : maxWindowSize));
+        const qreal fitRatio = qMin(enforcedSize.width() / imageSize.width(), enforcedSize.height() / imageSize.height());
+        targetSize = gvRoundSizeF(imageSize * fitRatio);
     }
 
-    // Windows reports the wrong minimum width, so we constrain the image size relative to the dpi to stop weirdness with tiny images
-#ifdef Q_OS_WIN
-    auto minimumImageSize = QSize(qRound(logicalDpiX()*1.5), logicalDpiY()/2);
-    if (imageSize.boundedTo(minimumImageSize) == imageSize)
-        imageSize = minimumImageSize;
-#endif
+    if (enforceMinSizeBothDimensions)
+        targetSize = targetSize.expandedTo(minWindowSize);
 
     // Match center after new geometry
     // This is smoother than a single geometry set for some reason
     QRect oldRect = geometry();
-    resize(imageSize + extraWidgetsSize);
+    resize(targetSize + extraWidgetsSize);
     QRect newRect = geometry();
     newRect.moveCenter(oldRect.center());
 
@@ -1002,7 +1026,7 @@ void MainWindow::zoomOut()
 
 void MainWindow::resetZoom()
 {
-    graphicsView->resetScale();
+    graphicsView->zoomToFit();
 }
 
 void MainWindow::originalSize()
@@ -1024,13 +1048,13 @@ void MainWindow::rotateLeft()
 
 void MainWindow::mirror()
 {
-    graphicsView->scale(-1, 1);
+    graphicsView->mirrorImage();
     resetZoom();
 }
 
 void MainWindow::flip()
 {
-    graphicsView->scale(1, -1);
+    graphicsView->flipImage();
     resetZoom();
 }
 
@@ -1078,7 +1102,7 @@ void MainWindow::saveFrameAs()
             nextFrame();
 
         graphicsView->getLoadedMovie().currentPixmap().save(fileName, nullptr, 100);
-        graphicsView->resetScale();
+        graphicsView->zoomToFit();
     });
 }
 

@@ -16,13 +16,6 @@ class QVGraphicsView : public QGraphicsView
 public:
     QVGraphicsView(QWidget *parent = nullptr);
 
-    enum class ScaleMode
-    {
-       resetScale,
-       zoom
-    };
-    Q_ENUM(ScaleMode)
-
     enum class GoToFileMode
     {
        constant,
@@ -44,13 +37,17 @@ public:
 
     void zoomOut(const QPoint &pos = QPoint(-1, -1));
 
-    void zoom(qreal scaleFactor, const QPoint &pos = QPoint(-1, -1));
+    void zoomRelative(const qreal relativeLevel, const QPoint &pos = QPoint(-1, -1));
 
-    void scaleExpensively();
-    void makeUnscaled();
+    void zoomAbsolute(const qreal absoluteLevel, const QPoint &pos = QPoint(-1, -1));
 
-    void resetScale();
+    void applyExpensiveScaling();
+    void removeExpensiveScaling();
+
+    void zoomToFit();
     void originalSize();
+
+    void centerImage();
 
     void goToFile(const GoToFileMode &mode, int index = 0);
 
@@ -60,23 +57,34 @@ public:
     void jumpToNextFrame();
     void setPaused(const bool &desiredState);
     void setSpeed(const int &desiredSpeed);
-    void rotateImage(int rotation);
+    void rotateImage(const int relativeAngle);
+    void mirrorImage();
+    void flipImage();
+
+    QSizeF getEffectiveOriginalSize() const;
 
     const QVImageCore::FileDetails& getCurrentFileDetails() const { return imageCore.getCurrentFileDetails(); }
     const QPixmap& getLoadedPixmap() const { return imageCore.getLoadedPixmap(); }
     const QMovie& getLoadedMovie() const { return imageCore.getLoadedMovie(); }
+    qreal getZoomLevel() const { return zoomLevel; }
+
+    static int roundToCompleteLogicalPixel(const qreal value, const qreal logicalScale);
+
+    static qreal reverseLogicalPixelRounding(const int value, const qreal logicalScale);
 
 signals:
     void cancelSlideshow();
 
     void fileChanged();
 
-    void updatedLoadedPixmapItem();
+    void zoomLevelChanged();
 
 protected:
     void wheelEvent(QWheelEvent *event) override;
 
     void resizeEvent(QResizeEvent *event) override;
+
+    void paintEvent(QPaintEvent *event) override;
 
     void dropEvent(QDropEvent *event) override;
 
@@ -96,55 +104,54 @@ protected:
 
     bool event(QEvent *event) override;
 
-    void fitInViewMarginless(const QRectF &rect);
-    void fitInViewMarginless(const QGraphicsItem *item);
+    bool isSmoothScalingRequested() const;
 
-    void centerOn(const QPointF &pos);
+    bool isExpensiveScalingRequested() const;
 
-    void centerOn(qreal x, qreal y);
+    QRect getContentRect() const;
 
-    void centerOn(const QGraphicsItem *item);
+    QRect getUsableViewportRect() const;
 
+    void setTransformScale(qreal absoluteScale);
+
+    QTransform getTransformWithNoScaling() const;
+
+    qreal getDpiAdjustment() const;
+
+    void handleDpiAdjustmentChange();
+
+    void handleSmoothScalingChange();
 
 private slots:
     void animatedFrameChanged(QRect rect);
 
     void postLoad();
 
-    void updateLoadedPixmapItem();
-
 private:
 
 
     QGraphicsPixmapItem *loadedPixmapItem;
 
-    bool isFilteringEnabled;
-    bool isScalingEnabled;
-    bool isScalingTwoEnabled;
+    int smoothScalingMode;
+    bool expensiveScalingAboveWindowSize;
+    qreal smoothScalingLimit;
     bool isPastActualSizeEnabled;
     bool isScrollZoomsEnabled;
     bool isLoopFoldersEnabled;
     bool isCursorZoomEnabled;
+    bool isOneToOnePixelSizingEnabled;
     int cropMode;
-    qreal scaleFactor;
+    qreal zoomMultiplier;
 
-    const int MARGIN = -2;
-
-    qreal currentScale;
-    QSize scaledSize;
-    bool isOriginalSize;
-    qreal maxScalingTwoSize;
+    qreal zoomLevel;
+    qreal appliedDpiAdjustment;
+    qreal appliedExpensiveScaleZoomLevel;
     QPoint lastZoomEventPos;
     QPointF lastZoomRoundingError;
     QPointF lastScrollRoundingError;
 
-    QTransform absoluteTransform;
-    QTransform zoomBasis;
-    qreal zoomBasisScaleFactor;
-
     QVImageCore imageCore { this };
 
-    QTimer *expensiveScaleTimerNew;
-    QPointF centerPoint;
+    QTimer *expensiveScaleTimer;
 };
 #endif // QVGRAPHICSVIEW_H

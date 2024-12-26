@@ -49,7 +49,7 @@ private slots:
 
     void bgColorCheckboxStateChanged(int arg1);
 
-    void scalingCheckboxStateChanged(int arg1);
+    void smoothScalingComboBoxCurrentIndexChanged(int index);
 
     void windowResizeComboBoxCurrentIndexChanged(int index);
 

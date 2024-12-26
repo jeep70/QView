@@ -126,6 +126,8 @@ public slots:
 
     void fileChanged();
 
+    void zoomLevelChanged();
+
     void disableActions();
 
 protected:
@@ -157,6 +159,7 @@ private:
     QMenu *virtualMenu;
 
     QTimer *slideshowTimer;
+    QTimer *zoomTitlebarUpdateTimer;
 
     QShortcut *escShortcut;
 

@@ -43,6 +43,8 @@ public:
 
     bool isDefault(const QString &key) const;
 
+    static void migrateOldSettings();
+
 signals:
     void settingsUpdated();
 
