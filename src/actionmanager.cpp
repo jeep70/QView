@@ -265,6 +265,8 @@ QMenu *ActionManager::buildViewMenu(bool addIcon, QWidget *parent)
     addCloneOfAction(viewMenu, "mirror");
     addCloneOfAction(viewMenu, "flip");
     viewMenu->addSeparator();
+    if (qvApp->supportsTitlebarHiding())
+        addCloneOfAction(viewMenu, "toggletitlebar");
     addCloneOfAction(viewMenu, "fullscreen");
 
     menuCloneLibrary.insert(viewMenu->menuAction()->data().toString(), viewMenu);
@@ -628,6 +630,8 @@ void ActionManager::actionTriggered(QAction *triggeredAction, MainWindow *releva
         relevantWindow->mirror();
     } else if (key == "flip") {
         relevantWindow->flip();
+    } else if (key == "toggletitlebar") {
+        relevantWindow->toggleTitlebarHidden();
     } else if (key == "fullscreen") {
         relevantWindow->toggleFullScreen();
     } else if (key == "firstfile") {
@@ -760,8 +764,13 @@ void ActionManager::initializeActionLibrary()
     flipAction->setData({"disable"});
     actionLibrary.insert("flip", flipAction);
 
+    auto *toggleTitlebarAction = new QAction(tr("Hide Title&bar"));
+    toggleTitlebarAction->setData({"windowdisable"});
+    actionLibrary.insert("toggletitlebar", toggleTitlebarAction);
+
     auto *fullScreenAction = new QAction(QIcon::fromTheme("view-fullscreen"), tr("Enter F&ull Screen"));
     fullScreenAction->setMenuRole(QAction::NoRole);
+    fullScreenAction->setData({"windowdisable"});
     actionLibrary.insert("fullscreen", fullScreenAction);
 
     auto *firstFileAction = new QAction(QIcon::fromTheme("go-first"), tr("&First File"));

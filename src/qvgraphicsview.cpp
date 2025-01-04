@@ -48,6 +48,8 @@ QVGraphicsView::QVGraphicsView(QWidget *parent) : QGraphicsView(parent)
     lastZoomEventPos = QPoint(-1, -1);
     lastZoomRoundingError = QPointF();
     lastScrollRoundingError = QPointF();
+    mousePressButton = Qt::MouseButton::NoButton;
+    mousePressModifiers = Qt::KeyboardModifier::NoModifier;
 
     zoomBasisScaleFactor = 1.0;
 
@@ -119,10 +121,48 @@ void QVGraphicsView::enterEvent(QEnterEvent *event)
     viewport()->setCursor(Qt::ArrowCursor);
 }
 
+void QVGraphicsView::mousePressEvent(QMouseEvent *event)
+{
+    const auto initializeDrag = [this, event]() {
+        mousePressButton = event->button();
+        mousePressModifiers = event->modifiers();
+        mousePressPosition = event->pos();
+        viewport()->setCursor(Qt::ClosedHandCursor);
+    };
+
+    if (event->button() == Qt::LeftButton && event->modifiers().testFlag(Qt::ControlModifier))
+    {
+        const auto windowState = window()->windowState();
+        if (!windowState.testFlag(Qt::WindowFullScreen) && !windowState.testFlag(Qt::WindowMaximized))
+            initializeDrag();
+        return;
+    }
+
+    QGraphicsView::mousePressEvent(event);
+}
+
 void QVGraphicsView::mouseReleaseEvent(QMouseEvent *event)
 {
+    if (mousePressButton != Qt::NoButton)
+    {
+        mousePressButton = Qt::NoButton;
+        mousePressModifiers = Qt::NoModifier;
+    }
+
     QGraphicsView::mouseReleaseEvent(event);
     viewport()->setCursor(Qt::ArrowCursor);
+}
+
+void QVGraphicsView::mouseMoveEvent(QMouseEvent *event)
+{
+    if (mousePressButton == Qt::LeftButton && mousePressModifiers.testFlag(Qt::ControlModifier))
+    {
+        const QPoint delta = event->pos() - mousePressPosition;
+        window()->move(window()->pos() + delta);
+        return;
+    }
+
+    QGraphicsView::mouseMoveEvent(event);
 }
 
 bool QVGraphicsView::event(QEvent *event)

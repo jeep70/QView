@@ -404,6 +404,15 @@ void QVApplication::defineFilterLists()
     nameFilterList << tr("All Files") + " (*)";
 }
 
+bool QVApplication::supportsTitlebarHiding()
+{
+#if defined COCOA_LOADED && QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    return true;
+#else
+    return false;
+#endif
+}
+
 qreal QVApplication::getPerceivedBrightness(const QColor &color)
 {
     return (color.red() * 0.299 + color.green() * 0.587 + color.blue() * 0.114) / 255.0;
