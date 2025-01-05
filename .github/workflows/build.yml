@@ -63,6 +63,8 @@ jobs:
           fi
 
       - uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v4

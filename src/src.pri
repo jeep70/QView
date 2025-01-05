@@ -13,7 +13,9 @@ SOURCES += \
     $$PWD/qvshortcutdialog.cpp \
     $$PWD/actionmanager.cpp \
     $$PWD/settingsmanager.cpp \
-    $$PWD/shortcutmanager.cpp
+    $$PWD/shortcutmanager.cpp \
+    $$PWD/../thirdparty/TinyEXIF/TinyEXIF.cpp \
+    $$PWD/../thirdparty/tinyxml2/tinyxml2.cpp
 
 !qv_disable_online_version_check:SOURCES += $$PWD/updatechecker.cpp
 
@@ -36,6 +38,10 @@ HEADERS += \
     $$PWD/actionmanager.h \
     $$PWD/settingsmanager.h \
     $$PWD/shortcutmanager.h
+
+INCLUDEPATH += \
+    $$PWD/../thirdparty/TinyEXIF \
+    $$PWD/../thirdparty/tinyxml2
 
 !qv_disable_online_version_check:HEADERS += $$PWD/updatechecker.h
 

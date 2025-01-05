@@ -1,3 +1,7 @@
+#include <QCoreApplication>
+#include <QDebug>
+#include <fstream>  // For file stream
+#include <TinyEXIF.h>
 #include "qvinfodialog.h"
 #include "ui_qvinfodialog.h"
 #include <QDateTime>
@@ -48,6 +52,40 @@ void QVInfoDialog::setInfo(const QFileInfo &value, const int &value2, const int 
         updateInfo();
 }
 
+QString readExifData(const QString &imagePath) {
+    // Open the file as a binary input stream
+    std::ifstream file(imagePath.toStdString(), std::ifstream::binary);
+
+    // Check if the file is open
+    if (!file.is_open()) {
+        return "Error: Unable to open image file!";
+    }
+
+    // Create an EXIFInfo object and read the EXIF data
+    TinyEXIF::EXIFInfo exifInfo(file);
+
+    // QString to accumulate the output
+    QString exifOutput;
+
+    // Check if EXIF data is present
+    if (exifInfo.Fields) {
+        exifOutput += "Camera Make: " + QString::fromStdString(exifInfo.Make) + "\n";
+        exifOutput += "Camera Model: " + QString::fromStdString(exifInfo.Model) + "\n";
+        exifOutput += "Focal Length: " + QString::number(exifInfo.FocalLength) + " mm\n";
+        exifOutput += "Exposure Time: " + QString::number(exifInfo.ExposureTime) + " s\n";
+        exifOutput += "F-Number: " + QString::number(exifInfo.FNumber) + "\n";
+        exifOutput += "ISO: " + QString::number(exifInfo.ISOSpeedRatings) + "\n";
+        exifOutput += "Date Taken: " + QString::fromStdString(exifInfo.DateTimeOriginal) + "\n";
+        exifOutput += "Latitude: " + QString::number(exifInfo.GeoLocation.Latitude) + "\n";
+        exifOutput += "Longitude: " + QString::number(exifInfo.GeoLocation.Longitude) + "\n";
+    } else {
+        exifOutput = "No EXIF data found.";
+    }
+
+    return exifOutput;  // Return the accumulated EXIF data as a QString
+}
+
+
 void QVInfoDialog::updateInfo()
 {
     QLocale locale = QLocale::system();
@@ -56,12 +94,16 @@ void QVInfoDialog::updateInfo()
     //this is just math to figure the megapixels and then round it to the tenths place
     const double megapixels = static_cast<double>(qRound(((static_cast<double>((width*height))))/1000000 * 10 + 0.5)) / 10 ;
 
+    QString exifData = readExifData(selectedFileInfo.absoluteFilePath());
+
     ui->nameLabel->setText(selectedFileInfo.fileName());
     ui->typeLabel->setText(mime.name());
     ui->locationLabel->setText(selectedFileInfo.path());
     ui->sizeLabel->setText(tr("%1 (%2 bytes)").arg(formatBytes(selectedFileInfo.size()), locale.toString(selectedFileInfo.size())));
     ui->modifiedLabel->setText(selectedFileInfo.lastModified().toString(locale.dateTimeFormat()));
     ui->dimensionsLabel->setText(tr("%1 x %2 (%3 MP)").arg(QString::number(width), QString::number(height), QString::number(megapixels)));
+    ui->miscLabel->setText(exifData);
+
     int gcd = getGcd(width,height);
     if (gcd != 0)
         ui->ratioLabel->setText(QString::number(width/gcd) + ":" + QString::number(height/gcd));
