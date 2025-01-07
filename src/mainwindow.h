@@ -26,6 +26,12 @@ public:
         QString previousPath;
     };
 
+    struct ViewportPosition
+    {
+        int widgetY;
+        int obscuredHeight;
+    };
+
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
 
@@ -113,6 +119,8 @@ public:
 
     int getTitlebarOverlap() const;
 
+    ViewportPosition getViewportPosition() const;
+
     const QVImageCore::FileDetails& getCurrentFileDetails() const { return graphicsView->getCurrentFileDetails(); }
 
 public slots:
@@ -125,6 +133,8 @@ public slots:
     void cancelSlideshow();
 
     void fileChanged();
+
+    void zoomLevelChanged();
 
     void disableActions();
 
@@ -157,6 +167,7 @@ private:
     QMenu *virtualMenu;
 
     QTimer *slideshowTimer;
+    QTimer *zoomTitlebarUpdateTimer;
 
     QShortcut *escShortcut;
 

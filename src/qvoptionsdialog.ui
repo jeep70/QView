@@ -349,6 +349,16 @@
         </widget>
        </item>
        <item row="7" column="1">
+        <widget class="QCheckBox" name="oneToOnePixelSizingCheckbox">
+         <property name="text">
+          <string>Zoom level is relative to screen pixels</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
         <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -361,7 +371,7 @@
          </property>
         </spacer>
        </item>
-       <item row="9" column="1">
+       <item row="10" column="1">
         <widget class="QCheckBox" name="pastActualSizeCheckbox">
          <property name="toolTip">
           <string>Stop the image from going past its actual size when resizing the window - you can still zoom past it though</string>
@@ -374,7 +384,7 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="1">
+       <item row="9" column="1">
         <widget class="QComboBox" name="cropModeComboBox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -402,7 +412,7 @@
          </item>
         </widget>
        </item>
-       <item row="8" column="0">
+       <item row="9" column="0">
         <widget class="QLabel" name="cropModeLabel">
          <property name="toolTip">
           <string>Ignores select sides of an image when fitting to window (some sides will extend beyond the window boundaries)</string>
@@ -438,7 +448,7 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="1">
+       <item row="11" column="1">
         <spacer name="horizontalSpacer_9">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -451,14 +461,14 @@
          </property>
         </spacer>
        </item>
-       <item row="11" column="0">
+       <item row="12" column="0">
         <widget class="QLabel" name="colorSpaceConversionLabel">
          <property name="text">
           <string>Color space conversion:</string>
          </property>
         </widget>
        </item>
-       <item row="11" column="1">
+       <item row="12" column="1">
         <widget class="QComboBox" name="colorSpaceConversionComboBox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">

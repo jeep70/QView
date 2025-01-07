@@ -164,6 +164,12 @@ void SettingsManager::initializeSettingsLibrary()
     settingsLibrary.insert("scalefactor", {25, {}});
     settingsLibrary.insert("scrollzoomsenabled", {true, {}});
     settingsLibrary.insert("cursorzoom", {true, {}});
+#ifdef Q_OS_MACOS
+    // Usually not desired due to the way macOS does DPI scaling
+    settingsLibrary.insert("onetoonepixelsizing", {false, {}});
+#else
+    settingsLibrary.insert("onetoonepixelsizing", {true, {}});
+#endif
     settingsLibrary.insert("cropmode", {0, {}});
     settingsLibrary.insert("pastactualsizeenabled", {true, {}});
     settingsLibrary.insert("colorspaceconversion", {1, {}});

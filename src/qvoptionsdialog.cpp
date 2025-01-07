@@ -170,6 +170,8 @@ void QVOptionsDialog::syncSettings(bool defaults, bool makeConnections)
     syncCheckbox(ui->scrollZoomsCheckbox, "scrollzoomsenabled", defaults, makeConnections);
     // cursorzoom
     syncCheckbox(ui->cursorZoomCheckbox, "cursorzoom", defaults, makeConnections);
+    // onetoonepixelsizing
+    syncCheckbox(ui->oneToOnePixelSizingCheckbox, "onetoonepixelsizing", defaults, makeConnections);
     // cropmode
     syncComboBox(ui->cropModeComboBox, "cropmode", defaults, makeConnections);
     // pastactualsizeenabled

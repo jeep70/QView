@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Connect graphicsview signals
     connect(graphicsView, &QVGraphicsView::fileChanged, this, &MainWindow::fileChanged);
-    connect(graphicsView, &QVGraphicsView::updatedLoadedPixmapItem, this, &MainWindow::setWindowSize);
+    connect(graphicsView, &QVGraphicsView::zoomLevelChanged, this, &MainWindow::zoomLevelChanged);
     connect(graphicsView, &QVGraphicsView::cancelSlideshow, this, &MainWindow::cancelSlideshow);
 
     // Initialize escape shortcut
@@ -79,6 +79,12 @@ MainWindow::MainWindow(QWidget *parent) :
     // Timer for slideshow
     slideshowTimer = new QTimer(this);
     connect(slideshowTimer, &QTimer::timeout, this, &MainWindow::slideshowAction);
+
+    // Timer for updating titlebar after zoom change
+    zoomTitlebarUpdateTimer = new QTimer(this);
+    zoomTitlebarUpdateTimer->setSingleShot(true);
+    zoomTitlebarUpdateTimer->setInterval(50);
+    connect(zoomTitlebarUpdateTimer, &QTimer::timeout, this, &MainWindow::buildWindowTitle);
 
     // Context menu
     auto &actionManager = qvApp->getActionManager();
@@ -280,30 +286,24 @@ void MainWindow::paintEvent(QPaintEvent *event)
     QPainter painter(this);
 
     const QColor &backgroundColor = customBackgroundColor.isValid() ? customBackgroundColor : painter.background().color();
-
-    // Find the top of the viewport to account for the menu bar if it's inside the window
-    // and/or the label that displays titlebar text in full screen mode.
-    const int viewportY = graphicsView->mapTo(this, QPoint()).y();
-    // On macOS, part of the viewport may be additionally covered with the window's translucent
-    // titlebar due to full size content view.
-    const int unobscuredViewportY = qMax(getTitlebarOverlap(), viewportY);
+    const ViewportPosition viewportPos = getViewportPosition();
 
     // Erase the area above the viewport, i.e. fill it with the painter's default color.
-    const QRect headerRect = QRect(0, 0, width(), viewportY);
+    const QRect headerRect = QRect(0, 0, width(), viewportPos.widgetY);
     if (headerRect.isValid())
     {
         painter.eraseRect(headerRect);
     }
 
     // Fill the viewport with the background color.
-    const QRect viewportRect = rect().adjusted(0, viewportY, 0, 0);
+    const QRect viewportRect = rect().adjusted(0, viewportPos.widgetY, 0, 0);
     if (viewportRect.isValid())
     {
         painter.fillRect(viewportRect, backgroundColor);
     }
 
     // If there's an error message, draw it centered inside the unobscured area of the viewport.
-    const QRect unobscuredViewportRect = rect().adjusted(0, unobscuredViewportY, 0, 0);
+    const QRect unobscuredViewportRect = rect().adjusted(0, viewportPos.widgetY + viewportPos.obscuredHeight, 0, 0);
     if (getCurrentFileDetails().errorData.hasError && unobscuredViewportRect.isValid())
     {
         const QVImageCore::ErrorData &errorData = getCurrentFileDetails().errorData;
@@ -387,9 +387,16 @@ void MainWindow::fileChanged()
     if (info->isVisible())
         refreshProperties();
     buildWindowTitle();
+    setWindowSize();
 
     // repaint to handle error message
     update();
+}
+
+void MainWindow::zoomLevelChanged()
+{
+    if (!zoomTitlebarUpdateTimer->isActive())
+        zoomTitlebarUpdateTimer->start();
 }
 
 void MainWindow::disableActions()
@@ -496,14 +503,16 @@ void MainWindow::buildWindowTitle()
         }
         case 2:
         {
-            newString = QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
+            newString = QString::number(graphicsView->getZoomLevel() * 100.0, 'f', 1) + "%";
+            newString += " - " + QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
             newString += "/" + QString::number(getCurrentFileDetails().folderFileInfoList.count());
             newString += " - " + getCurrentFileDetails().fileInfo.fileName();
             break;
         }
         case 3:
         {
-            newString = QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
+            newString = QString::number(graphicsView->getZoomLevel() * 100.0, 'f', 1) + "%";
+            newString += " - " + QString::number(getCurrentFileDetails().loadedIndexInFolder+1);
             newString += "/" + QString::number(getCurrentFileDetails().folderFileInfoList.count());
             newString += " - " + getCurrentFileDetails().fileInfo.fileName();
             if (!getCurrentFileDetails().errorData.hasError)
@@ -552,11 +561,6 @@ void MainWindow::setWindowSize()
     qreal minWindowResizedPercentage = qvApp->getSettingsManager().getInteger("minwindowresizedpercentage")/100.0;
     qreal maxWindowResizedPercentage = qvApp->getSettingsManager().getInteger("maxwindowresizedpercentage")/100.0;
 
-
-    QSize imageSize = getCurrentFileDetails().loadedPixmapSize;
-    imageSize -= QSize(4, 4);
-
-
     // Try to grab the current screen
     QScreen *currentScreen = screenContaining(frameGeometry());
 
@@ -579,28 +583,29 @@ void MainWindow::setWindowSize()
     const QSize hardLimitSize = currentScreen->availableSize() - windowFrameSize - extraWidgetsSize;
     const QSize screenSize = currentScreen->size();
     const QSize minWindowSize = (screenSize * minWindowResizedPercentage).boundedTo(hardLimitSize);
-    const QSize maxWindowSize = (screenSize * maxWindowResizedPercentage).boundedTo(hardLimitSize);
+    const QSize maxWindowSize = (screenSize * qMax(maxWindowResizedPercentage, minWindowResizedPercentage)).boundedTo(hardLimitSize);
+    const QSizeF imageSize = graphicsView->getEffectiveOriginalSize();
+    const LogicalPixelFitter fitter = graphicsView->getPixelFitter();
+    const bool enforceMinSizeBothDimensions = false;
 
-    if (imageSize.width() < minWindowSize.width() && imageSize.height() < minWindowSize.height())
+    QSize targetSize = fitter.snapSize(imageSize);
+
+    const bool limitToMin = targetSize.width() < minWindowSize.width() && targetSize.height() < minWindowSize.height();
+    const bool limitToMax = targetSize.width() > maxWindowSize.width() || targetSize.height() > maxWindowSize.height();
+    if (limitToMin || limitToMax)
     {
-        imageSize.scale(minWindowSize, Qt::KeepAspectRatio);
-    }
-    else if (imageSize.width() > maxWindowSize.width() || imageSize.height() > maxWindowSize.height())
-    {
-        imageSize.scale(maxWindowSize, Qt::KeepAspectRatio);
+        const QSizeF enforcedSize = fitter.unsnapSize(limitToMin ? minWindowSize : maxWindowSize);
+        const qreal fitRatio = qMin(enforcedSize.width() / imageSize.width(), enforcedSize.height() / imageSize.height());
+        targetSize = fitter.snapSize(imageSize * fitRatio);
     }
 
-    // Windows reports the wrong minimum width, so we constrain the image size relative to the dpi to stop weirdness with tiny images
-#ifdef Q_OS_WIN
-    auto minimumImageSize = QSize(qRound(logicalDpiX()*1.5), logicalDpiY()/2);
-    if (imageSize.boundedTo(minimumImageSize) == imageSize)
-        imageSize = minimumImageSize;
-#endif
+    if (enforceMinSizeBothDimensions)
+        targetSize = targetSize.expandedTo(minWindowSize);
 
     // Match center after new geometry
     // This is smoother than a single geometry set for some reason
     QRect oldRect = geometry();
-    resize(imageSize + extraWidgetsSize);
+    resize(targetSize + extraWidgetsSize);
     QRect newRect = geometry();
     newRect.moveCenter(oldRect.center());
 
@@ -1002,7 +1007,7 @@ void MainWindow::zoomOut()
 
 void MainWindow::resetZoom()
 {
-    graphicsView->resetScale();
+    graphicsView->zoomToFit();
 }
 
 void MainWindow::originalSize()
@@ -1014,23 +1019,25 @@ void MainWindow::rotateRight()
 {
     graphicsView->rotateImage(90);
     resetZoom();
+    setWindowSize();
 }
 
 void MainWindow::rotateLeft()
 {
     graphicsView->rotateImage(-90);
     resetZoom();
+    setWindowSize();
 }
 
 void MainWindow::mirror()
 {
-    graphicsView->scale(-1, 1);
+    graphicsView->mirrorImage();
     resetZoom();
 }
 
 void MainWindow::flip()
 {
-    graphicsView->scale(1, -1);
+    graphicsView->flipImage();
     resetZoom();
 }
 
@@ -1078,7 +1085,7 @@ void MainWindow::saveFrameAs()
             nextFrame();
 
         graphicsView->getLoadedMovie().currentPixmap().save(fileName, nullptr, 100);
-        graphicsView->resetScale();
+        graphicsView->zoomToFit();
     });
 }
 
@@ -1200,4 +1207,16 @@ int MainWindow::getTitlebarOverlap() const
 #endif
 
     return 0;
+}
+
+MainWindow::ViewportPosition MainWindow::getViewportPosition() const
+{
+    ViewportPosition result;
+    // This accounts for anything that may be above the viewport such as the menu bar (if it's inside
+    // the window) and/or the label that displays titlebar text in full screen mode.
+    result.widgetY = windowHandle() ? graphicsView->mapTo(this, QPoint()).y() : 0;
+    // On macOS, part of the viewport may be additionally covered with the window's translucent
+    // titlebar due to full size content view.
+    result.obscuredHeight = qMax(getTitlebarOverlap() - result.widgetY, 0);
+    return result;
 }

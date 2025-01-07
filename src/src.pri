@@ -12,6 +12,7 @@ SOURCES += \
     $$PWD/qvimagecore.cpp \
     $$PWD/qvshortcutdialog.cpp \
     $$PWD/actionmanager.cpp \
+    $$PWD/logicalpixelfitter.cpp \
     $$PWD/settingsmanager.cpp \
     $$PWD/shortcutmanager.cpp
 
@@ -34,6 +35,7 @@ HEADERS += \
     $$PWD/qvimagecore.h \
     $$PWD/qvshortcutdialog.h \
     $$PWD/actionmanager.h \
+    $$PWD/logicalpixelfitter.h \
     $$PWD/settingsmanager.h \
     $$PWD/shortcutmanager.h
 
